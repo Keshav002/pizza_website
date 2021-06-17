@@ -4,7 +4,10 @@ const PORT = process.env.PORT || 3000; //If environment variables have port vari
 const ejs = require('ejs');
 const path = require('path');
 const expressLayout = require('express-ejs-layouts');
+const { E2BIG } = require('constants');
 
+//assets
+app.use(express.static('public')); //used to tell where is our assets eg. css
 app.get('/', (req, res) => {
     res.render('home');
 })

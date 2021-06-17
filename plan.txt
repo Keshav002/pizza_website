@@ -14,4 +14,17 @@ then create required files and folders
       -making some changes in script in package.json
 
 [.] Creating git repo
+   --git init
+   --make file .gitignore and write the name node_modules for ignoring it
+
+[.] Install laravel mix
+   --npm install laravel-mix --save-dev
+   --create a file in root directory NAMED webpack.mix.js
+   --npm install cross-env --save-dev
+   adding some scripts in package.json related to laravel-mix like watch, production, develpoment 
+   set up js and scss
+
+[.] Install tailwind css
+using tailwind css by link provided on their website
+
 [.] Create home page using html, css (Tailwind css)
