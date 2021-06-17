@@ -1,0 +1,17 @@
+[.]Create directory structure
+for checking npm version npm -v
+for creating package.json file npm init
+then create required files and folders
+
+[.] Create a npm project and install all the dependencies
+            -Dependencies 
+              -express
+              -ejs express-ejs-layouts      npm i express ejs express-ejs-layouts
+            -DEV Dependencies
+              -nodemon                        npm i nodemon -D
+
+[.] Create express server - Create a server.js file
+      -making some changes in script in package.json
+
+[.] Creating git repo
+[.] Create home page using html, css (Tailwind css)
