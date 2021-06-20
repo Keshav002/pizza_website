@@ -28,3 +28,18 @@ then create required files and folders
 using tailwind css by link provided on their website
 
 [.] Create home page using html, css (Tailwind css)
+[.] Create cart page
+[.] Move routes to routes file[.] Add to cart functionality
+[.] Fetch all the pizzas from the database and display them on home page
+[.] Create new model and dummy database
+    -connect to mongodb
+    -use connect-mongo for session store
+    -dependancies
+      -mongoose, express-session, connect-mongo, dotenv
+   -axios to send ajax request
+   -install notification library npm i noty
+
+[.] Create login page with route
+[.] Create register page with route
+[.] Build register crud
+  -dependancies express-flash express-session dotenv
