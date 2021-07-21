@@ -41,5 +41,6 @@ using tailwind css by link provided on their website
 
 [.] Create login page with route
 [.] Create register page with route
-[] Build register crud
+[.] Build register crud
   -dependancies express-flash express-session dotenv
+[.] for adding stripe library type npm i @stripe/stripe-js

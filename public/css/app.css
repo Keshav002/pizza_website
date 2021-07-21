@@ -419,7 +419,7 @@ section.status {
   position: relative;
 }
 
-.status-box ul li:before {
+.status-box ul li:not(:last-child):before {
   content: "";
   position: absolute;
   top: 0;
@@ -428,10 +428,6 @@ section.status {
   height: 100px;
   background: #232323;
   margin-top: 10px;
-}
-
-.status-box ul li:nth-child(5) span:after {
-  box-shadow: 0 50px 0px 45px #ede3e8;
 }
 
 .status-box ul li.step-completed:before {
@@ -458,4 +454,98 @@ section.status {
   float: right;
   font-size: 14px;
   margin-top: 8px;
+}
+
+@media (max-width: 1060px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (max-width: 690px) {
+  .customer-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 890px) {
+  .admin-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .status-box ul li span:before {
+    font-size: 34px;
+  }
+}
+@media (max-width: 370px) {
+  nav li:last-child a {
+    font-size: 12px;
+  }
+}
+.StripeElement {
+  box-sizing: border-box;
+  width: 50%;
+  margin-left: auto;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.pizza-card {
+  transition: all 0.3s ease-in-out;
+}
+.pizza-card:hover {
+  background-color: #302d2d;
+}
+.pizza-card:hover .pizza-name {
+  color: white;
+}
+.pizza-card:hover .pizza-price {
+  color: white;
+}
+.pizza-card:hover .pizza-image {
+  -webkit-animation: spin 10000ms infinite linear;
+          animation: spin 10000ms infinite linear;
+}
+
+.main-pizza {
+  -webkit-animation: spin 30000ms infinite linear;
+          animation: spin 30000ms infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

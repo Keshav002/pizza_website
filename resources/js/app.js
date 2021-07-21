@@ -2,12 +2,12 @@ import axios from 'axios'
 import Noty from 'noty'
 import moment from 'moment'
 import {initAdmin} from './admin'
+import { initStripe } from './stripe'
 let addToCart = document.querySelectorAll('.add-to-cart')
 let cartCounter = document.querySelector('#cartCounter');
 
 function updateCart(pizza) {
     axios.post('/update-cart', pizza).then(res => {
-        console.log(res);
         cartCounter.innerText = res.data.totalQty;
         new Noty({
             type: 'success',
@@ -75,15 +75,17 @@ function updateStatus(order){
     })
 }
 
+
 updateStatus(order);
+
+initStripe();
 
 //Socket client side work
 let socket = io();
-initAdmin(socket)
 
 //Join 
 if(order){
-
+    
     socket.emit('join', `order_${order._id}`)
 }
 
@@ -91,6 +93,7 @@ let adminAreaPath = window.location.pathname
 
 
 if(adminAreaPath.includes('admin')){
+    initAdmin(socket)
     socket.emit('join', 'adminRoom')
     
 }
